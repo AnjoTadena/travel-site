@@ -1,11 +1,5 @@
-var $ = require('jquery');
+'use strict';
 
-import Person from './modules/Person';
+import MobileMenu from './modules/MobileMenu';
 
-var mayuumii = new Person();
-mayuumii.name = 'Mayuu Mii';
-
-mayuumii.greet();
-
-console.log($);
-// $('.site-header__btn-container').remove();
+const mm = new MobileMenu();
