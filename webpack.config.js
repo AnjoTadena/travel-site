@@ -1,18 +1,21 @@
 var path = require('path');
 
 module.exports = {
-  entry: "./app/assets/scripts/App.js",
+  entry: {
+    App: "./app/assets/scripts/App.js",
+    Vendor: "./app/assets/scripts/Vendor.js"
+  },
   output: {
     path: path.resolve(__dirname, "./app/temp/scripts"),
-    filename: "app.bundle.js"
+    filename: "[name].bundle.js"
   },
   module: {
     rules: [
-        {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: "babel-loader"
-        }
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
+      }
     ]
   }
 };
